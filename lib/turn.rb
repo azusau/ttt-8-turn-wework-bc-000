@@ -36,16 +36,10 @@ def turn(board)
   input = gets.strip
   index = input_to_index(input)
   
-  #Not sure from around here
-  
   if valid_move?(board, index) == true
     move
   else
-    while valid_move?(board, index) == false
-    puts "Please enter a different number:"
-    input = gets.strip
-    break
-    end
+   turn(board)
   end
   display_board(index)
 end
