@@ -42,5 +42,5 @@ def turn(board)
    puts "Your move is invalid!"
    turn(board)
   end
-  display_board(index)
+  display_board(board)
 end
