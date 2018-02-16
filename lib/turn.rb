@@ -27,7 +27,7 @@ def input_to_index(input)
 end
 
 
-def move(board, index, token = X)
+def move(board, index, token = "X")
   board[index] = token 
 end
 
@@ -36,7 +36,7 @@ def turn(board)
   input = gets.strip
   index = input_to_index(input)
   
-  if valid_move?(board, index) == true
+  if valid_move?(board, index, token = "X") == true
     move(board, index)
   else
    puts "Your move is invalid!"
