@@ -39,6 +39,7 @@ def turn(board)
   if valid_move?(board, index) == true
     move(board, index, token = X)
   else
+    puts "Your move is invalid!"
    turn(board)
   end
   display_board(index)
